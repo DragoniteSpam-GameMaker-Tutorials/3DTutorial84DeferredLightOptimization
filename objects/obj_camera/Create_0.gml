@@ -169,6 +169,8 @@ self.gbuff_normal = -1;
 
 self.surf_combine = -1;
 
+surf_light = -1;
+
 var n = 1024;
 var s = sqrt(n);
 self.lights = array_create(n * 3);

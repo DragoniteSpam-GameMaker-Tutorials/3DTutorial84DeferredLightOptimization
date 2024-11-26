@@ -1,7 +1,7 @@
 function draw_3d_world() {
     var cam = camera_get_active();
     camera_set_view_mat(cam, mat_view);
-    camera_set_proj_mat(cam, matrix_build_projection_perspective_fov(-60, -16 / 9, 1, 8_000));
+    camera_set_proj_mat(cam, mat_proj);
     camera_apply(cam);
 
     gpu_set_cullmode(cull_counterclockwise);
