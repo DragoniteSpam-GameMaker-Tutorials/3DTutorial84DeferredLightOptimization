@@ -177,3 +177,8 @@ for (var i = 0; i < n * 3; i += 3) {
     self.lights[i + 1] = ((i div s) - (s / 2)) * 120;
     self.lights[i + 2] = 64;
 }
+
+var b = buffer_load("sphere.vbuff");
+vb_sphere = vertex_create_buffer_from_buffer(b, format);
+vertex_freeze(vb_sphere);
+buffer_delete(b);
