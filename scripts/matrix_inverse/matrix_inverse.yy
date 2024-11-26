@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"matrix_inverse",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"matrix_inverse",
+  "parent":{
+    "name":"3DTutorial84DeferredLightOptimization",
+    "path":"3DTutorial84DeferredLightOptimization.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
