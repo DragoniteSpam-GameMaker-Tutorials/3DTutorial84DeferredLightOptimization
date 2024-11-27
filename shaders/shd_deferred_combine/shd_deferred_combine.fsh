@@ -1,6 +1,3 @@
-varying vec2 v_vTexcoord;
-varying vec4 v_vColour;
-
 uniform sampler2D samp_depth;
 uniform sampler2D samp_normal;
 

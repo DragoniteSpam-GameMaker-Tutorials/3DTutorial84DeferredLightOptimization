@@ -8,6 +8,7 @@ texture_set_stage(sampler_depth, surface_get_texture_depth(self.gbuff_diffuse));
 texture_set_stage(sampler_normal, surface_get_texture(self.gbuff_normal));
 
 var u_light_point = shader_get_uniform(shd_deferred_combine, "u_light_point");
+var u_position = shader_get_uniform(shd_deferred_combine, "u_position");
 
 var u_znear = shader_get_uniform(shd_deferred_combine, "u_znear");
 var u_zfar = shader_get_uniform(shd_deferred_combine, "u_zfar");
@@ -32,8 +33,8 @@ for (var i = 0, n = array_length(self.lights); i < n; i += 3) {
     var point = matrix_transform_vertex(self.mat_view, xx, yy, zz);
     
     shader_set_uniform_f(u_light_point, point[0], point[1], point[2]);
+    shader_set_uniform_f(u_position, xx, yy, zz, 160);
     
-    matrix_set(matrix_world, matrix_build(xx, yy, zz, 0, 0, 0, 160, 160, 160));
     vertex_submit(vb_sphere, pr_trianglelist, -1);
 }
 
